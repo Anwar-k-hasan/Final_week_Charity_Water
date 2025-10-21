@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Where’s My Clean Water!!!</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">
+        <!-- <span class="drop" aria-hidden="true">💧</span> -->
+         <img class="drop" aria-hidden="true" src="assets/charityWater.png" alt="Charity_Water_Logo">
+        <span class="title-text">Where’s My Clean Water!!!</span>
+      </div>
+      <div class="level" id="levelLabel">Level: —/10</div>
+      <button id="homeBtn" class="homeBtn hidden" aria-label="Home">🏠</button>
+    </header>
+
+    <!-- Title Screen -->
+    <main id="titleScreen" class="screen active title">
+      <h1>Where’s My Clean Water!!!</h1>
+      <p class="subtitle">
+        Rotate the pipes to connect the <b>clean water</b> to the well while keeping the
+        <b>dirty water</b> away.
+      </p>
+      <div class="buttons">
+        <button id="startBtn" class="btn primary">Start Game</button>
+        <a class="btn secondary" target="_blank" rel="noopener"
+           href="https://www.charitywater.org/">Learn More</a>
+      </div>
+      <p class="charity-tag">
+        A game for charity · <a target="_blank" rel="noopener" href="https://www.charitywater.org/">charity: water</a>
+      </p>
+    </main>
+
+    <!-- Game Screen -->
+    <main id="gameScreen" class="screen">
+      <div class="gridWrap">
+        <div id="grid" class="grid" role="grid" aria-label="Pipe grid"></div>
+        <p class="hint">Tap/click tiles to rotate</p>
+      </div>
+    </main>
+
+    <!-- Modals -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modalCard">
+        <button id="modalClose" class="xBtn" aria-label="Close">✕</button>
+        <h2 id="modalTitle" class="modalTitle">Instructions</h2>
+        <div id="modalBody" class="modalBody"></div>
+        <div class="modalActions" id="modalActions"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
